@@ -62,8 +62,8 @@ if b_pressed:
             for state in process_urls(urls):
                 st.write(f"**Status:** {state}")
         status.markdown(f"**Status:** ✅ Success: URLs processed.")
+        time.sleep(1)
         st.session_state.url_complete_state="document added in vectorstore"
-        time.sleep(2)
     else:
         st.session_state.url_complete_state = "document not added in vectorstore"
         error.markdown("enter valid url")
